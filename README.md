@@ -1,2 +1,1 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+Tugas ada di folder `lib/`, folder tugas 1, tugas 2, tugas 3
