@@ -1,6 +1,5 @@
 import 'dart:io';
 
-// List of Map untuk menyimpan data buku
 List<Map<String, String>> bookshelf = [];
 
 void main() async {
@@ -14,7 +13,7 @@ void main() async {
     String? choice = stdin.readLineSync();
 
     if (choice == '1') {
-      await addBook(); // Menambahkan buku dengan asynchronous function
+      await addBook();
     } else if (choice == '2') {
       showBooks();
     } else if (choice == '3') {
@@ -28,7 +27,6 @@ void main() async {
   }
 }
 
-// Asynchronous function untuk menambahkan buku
 Future<void> addBook() async {
   stdout.write('\nMasukkan judul buku: ');
   String? title = stdin.readLineSync();
@@ -46,7 +44,6 @@ Future<void> addBook() async {
       'author': author
     };
 
-    // Simulasi delay untuk asynchronous process
     await Future.delayed(Duration(seconds: 1));
 
     bookshelf.add(newBook);
@@ -56,7 +53,6 @@ Future<void> addBook() async {
   }
 }
 
-// Menampilkan semua buku yang ada di rak
 void showBooks() {
   if (bookshelf.isEmpty) {
     print('\nRak Buku kosong.');
@@ -71,7 +67,6 @@ void showBooks() {
   }
 }
 
-// Mencari buku berdasarkan judul
 void searchBook() {
   stdout.write('\nMasukkan judul buku yang ingin dicari: ');
   String? searchTitle = stdin.readLineSync();

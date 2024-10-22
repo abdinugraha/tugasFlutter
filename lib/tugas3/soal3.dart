@@ -1,37 +1,29 @@
 import 'dart:io';
 
-// Abstract class untuk mendefinisikan kerangka umum Geometri
 abstract class Geometry {
   String name;
 
   Geometry(this.name);
 
-  // Method untuk menampilkan informasi tentang objek geometri
   void displayInfo() {
     print('\n=== $name ===');
   }
 }
 
-// Abstract class turunan untuk bangun datar (2D)
 abstract class Shape2D extends Geometry {
   Shape2D(String name) : super(name);
 
-  // Method abstrak untuk menghitung luas
   double calculateArea();
 
-  // Method abstrak untuk menghitung keliling
   double calculatePerimeter();
 }
 
-// Abstract class turunan untuk bangun ruang (3D)
 abstract class Shape3D extends Geometry {
   Shape3D(String name) : super(name);
 
-  // Method abstrak untuk menghitung volume
   double calculateVolume();
 }
 
-// Implementasi Bangun Datar (Persegi)
 class Square extends Shape2D {
   double side;
 
@@ -56,7 +48,6 @@ class Square extends Shape2D {
   }
 }
 
-// Implementasi Bangun Datar (Lingkaran)
 class Circle extends Shape2D {
   double radius;
 
@@ -81,7 +72,6 @@ class Circle extends Shape2D {
   }
 }
 
-// Implementasi Bangun Datar (Persegi Panjang)
 class Rectangle extends Shape2D {
   double length, width;
 
@@ -125,7 +115,6 @@ class Cube extends Shape3D {
   }
 }
 
-// Implementasi Bangun Ruang (Tabung)
 class Cylinder extends Shape3D {
   double radius, height;
 
@@ -144,7 +133,6 @@ class Cylinder extends Shape3D {
   }
 }
 
-// Fungsi utama untuk Kalkulator Geometri
 void main() {
   while (true) {
     print('\n=== Kalkulator Geometri ===');
@@ -215,7 +203,6 @@ void kalkulatorBangunDatar() {
   }
 }
 
-// Fungsi untuk kalkulator bangun ruang
 void kalkulatorBangunRuang() {
   while (true) {
     print('\n=== Kalkulator Bangun Ruang ===');

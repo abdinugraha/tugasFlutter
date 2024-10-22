@@ -72,7 +72,6 @@ void main() {
         print('Pilihan tidak valid. Harap pilih menu yang tersedia.');
     }
 
-    // Jeda sebelum menampilkan menu lagi
     if (running) {
       print('\nTekan Enter untuk melanjutkan...');
       stdin.readLineSync();
